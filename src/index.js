@@ -1,8 +1,8 @@
 import './Utils/Locales/i18n';
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
-import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
+import {BrowserRouter as Router, Switch} from "react-router-dom";
 import {NavigationDrawer} from "./Components/Navigation/NavigationDrawer";
 import {createStore} from "redux";
 import reducer from './Redux/Reducers';
@@ -26,27 +26,19 @@ const CustomRoute = () => {
     <React.Fragment>
       <SuspenseBackdrop/>
       <NavigationDrawer>
-        <Routes>
-          <Route exact path='/home' element={<PrivateRoute/>}>
-            <Route exact path='/home' element={<Login/>}/>
-          </Route>
-          <Route exact path='/login' element={<PublicRoute/>}>
-            <Route exact path='/login' element={<Login/>}/>
-          </Route>
-          <Route exact path='/registration' element={<PublicRoute/>}>
-            <Route exact path='/registration' element={<Registration/>}/>
-          </Route>
-          <Route exact path='/confirm-email' element={<PublicRoute/>}>
-            <Route exact path='/confirm-email' element={<ConfirmEmail/>}/>
-          </Route>
-        </Routes>
+        <Switch>
+          <PrivateRoute exact path="/home" component={Login}/>
+          <PublicRoute exact path="/login" component={Login}/>
+          <PublicRoute exact path="/registration" component={Registration}/>
+          <PublicRoute exact path="/confirm-email" component={ConfirmEmail}/>
+        </Switch>
       </NavigationDrawer>
     </React.Fragment>
   )
 }
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+
+ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
       <Router>
@@ -61,7 +53,8 @@ root.render(
         </ThemeWrapper>
       </Router>
     </Provider>
-  </React.StrictMode>
+  </React.StrictMode>,
+  document.getElementById('root')
 );
 
 // If you want to start measuring performance in your app, pass a function

@@ -1,5 +1,5 @@
 import React, {useContext, useEffect, useState} from 'react';
-import {useNavigate} from "react-router-dom";
+import {useHistory} from "react-router-dom";
 import {get, patch, post} from "../Utils/Api/Fetch";
 import {SUPPORTED_ACTIONS, useAlerts} from "./Theme/AlertsProvider";
 import {useTranslation} from "react-i18next";
@@ -9,7 +9,7 @@ const UsersContext = React.createContext(null);
 
 const UsersProvider = ({children}) => {
   const userApi = '/user';
-  const history = useNavigate();
+  const history = useHistory();
   const {t} = useTranslation();
   const {setAlert, successTemplate} = useAlerts();
   const [user, setUser] = useState({username: '', email: ''});

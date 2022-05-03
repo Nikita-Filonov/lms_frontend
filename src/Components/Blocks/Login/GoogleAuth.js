@@ -1,6 +1,6 @@
 import React from "react";
 import GoogleLogin from "react-google-login";
-import {useNavigate} from "react-router-dom";
+import {useHistory} from "react-router-dom";
 import {useTranslation} from "react-i18next";
 import {Box} from "@mui/material";
 import IconButton from "@mui/material/IconButton";
@@ -17,7 +17,7 @@ export const GoogleAuth = () => {
   const {t} = useTranslation();
   const {setAlert} = useAlerts();
   const {login} = useUsers();
-  const history = useNavigate();
+  const history = useHistory();
 
   const googleLogin = async (payload) => {
     store.dispatch({type: SET_BACKDROP, payload: true});

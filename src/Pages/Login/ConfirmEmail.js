@@ -2,7 +2,7 @@ import React, {useEffect, useRef, useState} from "react";
 import {Button, TextField, Typography} from "@mui/material";
 import {MailOutline, VpnKey} from "@mui/icons-material";
 import {post} from "../../Utils/Api/Fetch";
-import {useNavigate} from "react-router-dom";
+import {useHistory} from "react-router-dom";
 import {Trans, useTranslation} from "react-i18next";
 import {useUsers} from "../../Providers/UsersProvider";
 import {LoginLayout} from "../../Components/Layouts/LoginLayout";
@@ -14,7 +14,7 @@ const ConfirmEmail = () => {
   const {t} = useTranslation();
   const {login} = useUsers();
   const {setAlert} = useAlerts();
-  const history = useNavigate();
+  const history = useHistory();
   const interval = useRef(null);
   const [code, setCode] = useState('');
   const [email, setEmail] = useState('');
@@ -26,7 +26,7 @@ const ConfirmEmail = () => {
     setEmail(queryParams.get('email'));
   }, [])
 
-  useEffect(() => seconds === 0 && clearInterval(interval.current), [seconds])
+  useEffect(() => seconds === 0 && clearInterval(interval.current), [seconds]);
 
   useEffect(() => {
     if (!disabled) {
@@ -41,12 +41,12 @@ const ConfirmEmail = () => {
   const onSendEmail = async () => {
     setDisabled(true);
     setSeconds(WAIT_SECONDS);
-    const {error} = await post('/api/v1/user/send-confirm-email/', {email}, false);
+    const {error} = await post('/user/send-confirm-email/', {email}, false);
     setAlert(error ? t('confirmEmail.errorSendingEmail') : t('confirmEmail.successSendingEmail'));
   }
 
   const onSendCode = async () => {
-    const {error, json} = await post('/api/v1/user/confirm-email/', {email, code}, false);
+    const {error, json} = await post('/user/confirm-email/', {email, code}, false);
     !error && await login(json?.token);
     setAlert(error ? t('confirmEmail.activationErrorAlert') : t('confirmEmail.activationSuccessAlert'));
   }
