@@ -96,3 +96,19 @@ export const GoogleAuthStyles = {
     position: 'relative',
   }
 };
+
+export const CommonStyles = {
+  spinner: {
+    marginLeft: '50%',
+    marginTop: '20%'
+  },
+  breakText: {
+    wordWrap: 'break-word',
+    whiteSpace: 'pre-line'
+  },
+  fab: {
+    position: 'fixed',
+    right: 30,
+    bottom: 70
+  }
+};

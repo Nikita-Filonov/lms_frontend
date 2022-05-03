@@ -15,4 +15,4 @@ export const INITIAL_USERS = {
     }
   },
   backdrop: false
-}
+};

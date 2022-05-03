@@ -3,6 +3,8 @@ import {MainLayout} from "../../Components/Layouts/MainLayout";
 import {useCourses} from "../../Providers/CoursesProvider";
 import {CourseCard} from "../../Components/Items/Courses/CourseCard";
 import {Grid} from "@mui/material";
+import {CustomFab} from "../../Components/Common/Buttons/CustomFab";
+import {Add} from "@mui/icons-material";
 
 
 export const CoursesList = () => {
@@ -10,7 +12,7 @@ export const CoursesList = () => {
 
   useEffect(() => {
     (async () => await getCourses())()
-  }, [])
+  }, [getCourses]);
 
 
   return (
@@ -18,6 +20,7 @@ export const CoursesList = () => {
       <Grid container spacing={2}>
         {courses.map(course => <CourseCard key={course.id} course={course}/>)}
       </Grid>
+      <CustomFab icon={<Add/>}/>
     </MainLayout>
   )
 }
