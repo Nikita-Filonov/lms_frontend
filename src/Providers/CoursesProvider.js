@@ -1,12 +1,18 @@
-import React, {useContext} from 'react';
+import React, {useContext, useState} from 'react';
+import {get} from "../Utils/Api/Fetch";
 
 const CoursesContext = React.createContext(null);
 
 const CoursesProvider = ({children}) => {
+  const [courses, setCourses] = useState([]);
 
+  const getCourses = async () => {
+    const {json, error} = await get('/courses/', true);
+    !error && setCourses(json);
+  }
 
   return (
-    <CoursesContext.Provider value={{}}>
+    <CoursesContext.Provider value={{courses, getCourses}}>
       {children}
     </CoursesContext.Provider>
   );
