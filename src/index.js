@@ -2,7 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
 import {NavigationDrawer} from "./Components/Navigation/NavigationDrawer";
+import {createStore} from "redux";
 
+
+export const store = createStore(reducer);
 
 const CustomRoute = () => {
   return (
