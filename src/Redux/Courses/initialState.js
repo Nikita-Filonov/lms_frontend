@@ -1,6 +1,8 @@
 export const INITIAL_COURSES = {
-  createCourseModal: {
-    modal: false,
+  course: {
+    title: '',
+    description: '',
     editMode: false
-  }
+  },
+  createCourseModal: false
 };

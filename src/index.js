@@ -17,7 +17,7 @@ import {AlertsProvider} from "./Providers/Theme/AlertsProvider";
 import {UsersProvider} from "./Providers/UsersProvider";
 import SuspenseBackdrop from "./Components/Common/SuspenseBackdrop";
 import {PrivateRoute} from "./Components/Navigation/Routers/PrivateRoute";
-import {CoursesList} from "./Pages/Courses/CoursesList";
+import CoursesList from "./Pages/Courses/CoursesList";
 import {CoursesProvider} from "./Providers/CoursesProvider";
 
 

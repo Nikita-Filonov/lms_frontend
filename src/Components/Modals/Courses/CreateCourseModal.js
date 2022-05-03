@@ -2,13 +2,14 @@ import React from "react";
 import {ModalWrapper} from "../../Common/Modals/ModalWrapper";
 import {Button, DialogActions, DialogContent, DialogTitle} from "@mui/material";
 import {connect} from 'react-redux';
+import {setCreateCourseModal} from "../../../Redux/Courses/coursesActions";
 
-const CreateCourse = ({createCourseModal, setCreateCourseModal}) => {
+const CreateCourseModal = ({createCourseModal, setCreateCourseModal}) => {
 
   const onClose = () => setCreateCourseModal(false);
 
   return (
-    <ModalWrapper>
+    <ModalWrapper modal={createCourseModal} onClose={onClose}>
       <DialogTitle id="alert-dialog-title">
         {"Use Google's location service?"}
       </DialogTitle>
@@ -23,4 +24,5 @@ const CreateCourse = ({createCourseModal, setCreateCourseModal}) => {
   )
 };
 
-export default connect(null, null)(CreateCourse);
+const getState = (state) => ({createCourseModal: state.courses.createCourseModal});
+export default connect(getState, {setCreateCourseModal})(CreateCourseModal);
