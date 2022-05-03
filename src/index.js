@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
 import {NavigationDrawer} from "./Components/Navigation/NavigationDrawer";
 import {createStore} from "redux";
+import reducer from './Redux/Reducers';
 
 
 export const store = createStore(reducer);

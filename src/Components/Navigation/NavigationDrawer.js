@@ -3,7 +3,6 @@ import {useState} from 'react';
 import {useTheme} from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import List from '@mui/material/List';
-import CssBaseline from '@mui/material/CssBaseline';
 import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
@@ -23,7 +22,6 @@ export const NavigationDrawer = ({children}) => {
 
   return (
     <Box sx={{display: 'flex'}}>
-      <CssBaseline/>
       <NavigationNavbar open={open} onDrawerOpen={onDrawerOpen}/>
       <CustomDrawer variant="permanent" open={open}>
         <CustomDrawerHeader>
