@@ -1,6 +1,8 @@
+import './Utils/Locales/i18n';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
+import {BrowserRouter as Router, Switch} from "react-router-dom";
 import {NavigationDrawer} from "./Components/Navigation/NavigationDrawer";
 import {createStore} from "redux";
 import reducer from './Redux/Reducers';
@@ -23,9 +25,11 @@ const CustomRoute = () => {
     <React.Fragment>
       <SuspenseBackdrop/>
       <NavigationDrawer>
-        <PublicRoute exact path="/login" component={Login}/>
-        <PublicRoute exact path="/registration" component={Registration}/>
-        <PublicRoute exact path="/confirm-email" component={ConfirmEmail}/>
+        <Switch>
+          <PublicRoute exact path="/login" component={Login}/>
+          <PublicRoute exact path="/registration" component={Registration}/>
+          <PublicRoute exact path="/confirm-email" component={ConfirmEmail}/>
+        </Switch>
       </NavigationDrawer>
     </React.Fragment>
   )
@@ -35,15 +39,17 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <ThemeWrapper>
-        <CustomThemeProvider>
-          <AlertsProvider>
-            <UsersProvider>
-              <CustomRoute/>
-            </UsersProvider>
-          </AlertsProvider>
-        </CustomThemeProvider>
-      </ThemeWrapper>
+      <Router>
+        <ThemeWrapper>
+          <CustomThemeProvider>
+            <AlertsProvider>
+              <UsersProvider>
+                <CustomRoute/>
+              </UsersProvider>
+            </AlertsProvider>
+          </CustomThemeProvider>
+        </ThemeWrapper>
+      </Router>
     </Provider>
   </React.StrictMode>
 );

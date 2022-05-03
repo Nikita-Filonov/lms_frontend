@@ -1,3 +1,5 @@
+import {Collapse, Fade, Grow, Slide, Zoom} from "@mui/material";
+
 export const DEFAULT_THEME_SETTINGS = {
   themeMode: 'dark',
   snackbar: {

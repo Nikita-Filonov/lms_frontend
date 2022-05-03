@@ -5,7 +5,7 @@ import {Close} from "@mui/icons-material";
 import {useSelector} from "react-redux";
 import {useTranslation} from "react-i18next";
 import {useCustomTheme} from "./CustomThemeProvider";
-import {DEFAULT_THEME_SETTINGS} from "../../Utils/Constants/Theme";
+import {DEFAULT_THEME_SETTINGS, TRANSITIONS} from "../../Utils/Constants/Theme";
 
 const AlertsContext = React.createContext(null);
 

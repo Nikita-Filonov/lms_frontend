@@ -11,9 +11,11 @@ import NavigationNavbar from "./NavigationNavbar";
 import {CustomDrawer, CustomDrawerHeader} from "../../Styles/Blocks";
 import {Description} from "@mui/icons-material";
 import {DrawerListItem} from "../Common/ListItems/DrawerListItem";
+import {useUsers} from "../../Providers/UsersProvider";
 
 
 export const NavigationDrawer = ({children}) => {
+  const {token} = useUsers();
   const theme = useTheme();
   const [open, setOpen] = useState(false);
 
@@ -21,23 +23,27 @@ export const NavigationDrawer = ({children}) => {
   const onDrawerClose = () => setOpen(false);
 
   return (
-    <Box sx={{display: 'flex'}}>
-      <NavigationNavbar open={open} onDrawerOpen={onDrawerOpen}/>
-      <CustomDrawer variant="permanent" open={open}>
-        <CustomDrawerHeader>
-          <IconButton onClick={onDrawerClose}>
-            {theme.direction === 'rtl' ? <ChevronRightIcon/> : <ChevronLeftIcon/>}
-          </IconButton>
-        </CustomDrawerHeader>
-        <Divider/>
-        <List>
-          <DrawerListItem icon={<Description/>} open={open} title={'Курсы'}/>
-        </List>
-      </CustomDrawer>
-      <Box component="main" sx={{flexGrow: 1, p: 3}}>
-        <CustomDrawerHeader/>
-        {children}
+    token
+      ? <Box sx={{display: 'flex'}}>
+        <NavigationNavbar open={open} onDrawerOpen={onDrawerOpen}/>
+        <CustomDrawer variant="permanent" open={open}>
+          <CustomDrawerHeader>
+            <IconButton onClick={onDrawerClose}>
+              {theme.direction === 'rtl' ? <ChevronRightIcon/> : <ChevronLeftIcon/>}
+            </IconButton>
+          </CustomDrawerHeader>
+          <Divider/>
+          <List>
+            <DrawerListItem icon={<Description/>} open={open} title={'Курсы'}/>
+          </List>
+        </CustomDrawer>
+        <Box component="main" sx={{flexGrow: 1, p: 3}}>
+          <CustomDrawerHeader/>
+          {children}
+        </Box>
       </Box>
-    </Box>
+      : <div>
+        {children}
+      </div>
   );
 }

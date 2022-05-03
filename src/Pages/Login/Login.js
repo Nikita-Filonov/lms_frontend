@@ -18,7 +18,7 @@ export const Login = () => {
   const [alert, setAlert] = useState({});
 
   const onLogin = async () => {
-    const {json, code} = await post('/api/v1/login/', {email, password}, false);
+    const {json, code} = await post('/login/', {email, password}, false);
     if (code === 401) {
       setAlert(t('login.authError'));
       return;

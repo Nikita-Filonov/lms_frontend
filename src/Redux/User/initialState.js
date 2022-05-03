@@ -13,5 +13,6 @@ export const INITIAL_USERS = {
       description: '',
       confirmButton: ''
     }
-  }
+  },
+  backdrop: false
 }

@@ -3,7 +3,6 @@ import {Box, Link} from "@mui/material";
 import {LoadingButton} from "@mui/lab";
 import {Link as RouterLink, useHistory} from 'react-router-dom';
 import {PasswordTextField} from "../../Components/Common/Inputs/PasswordTextField";
-import {useTranslation} from "react-i18next";
 import {post} from "../../Utils/Api/Fetch";
 import {CustomInput} from "../../Components/Common/Inputs/CustomInput";
 import {LoginLayout} from "../../Components/Layouts/LoginLayout";
@@ -11,7 +10,6 @@ import {LoginLayout} from "../../Components/Layouts/LoginLayout";
 
 export const Registration = () => {
   const history = useHistory();
-  const {t} = useTranslation();
   const [request, setRequest] = useState(false);
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');

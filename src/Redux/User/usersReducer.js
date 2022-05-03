@@ -1,5 +1,5 @@
 import {INITIAL_USERS} from './initialState';
-import {SET_CONFIRM_ACTION, SET_THEME} from "./actionTypes";
+import {SET_BACKDROP, SET_CONFIRM_ACTION, SET_THEME} from "./actionTypes";
 import {THEME_BACKUP} from "../../Utils/Constants/Backup";
 
 
@@ -10,6 +10,8 @@ export const usersReducer = (state = INITIAL_USERS, action = {}) => {
       return {...state, theme: action.payload};
     case SET_CONFIRM_ACTION:
       return {...state, confirmAction: action.payload};
+    case SET_BACKDROP:
+      return {...state, backdrop: action.payload};
     default:
       return state;
   }

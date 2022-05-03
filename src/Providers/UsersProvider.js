@@ -8,7 +8,7 @@ import {TOKEN_BACKUP} from "../Utils/Constants/Backup";
 const UsersContext = React.createContext(null);
 
 const UsersProvider = ({children}) => {
-  const userApi = '/api/v1/user/';
+  const userApi = '/user';
   const history = useHistory();
   const {t} = useTranslation();
   const {setAlert, successTemplate} = useAlerts();
