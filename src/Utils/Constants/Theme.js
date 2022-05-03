@@ -7,3 +7,11 @@ export const DEFAULT_THEME_SETTINGS = {
     maxStack: 5
   }
 };
+
+export const TRANSITIONS = {
+  'slide': Slide,
+  'grow': Grow,
+  'fade': Fade,
+  'zoom': Zoom,
+  'collapse': Collapse,
+};

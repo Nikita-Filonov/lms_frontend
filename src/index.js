@@ -7,6 +7,12 @@ import reducer from './Redux/Reducers';
 import {Provider} from "react-redux";
 import {ThemeWrapper} from "./Providers/Theme/ThemeProvider";
 import {CustomThemeProvider} from "./Providers/Theme/CustomThemeProvider";
+import {PublicRoute} from "./Components/Navigation/Routers/PublicRoute";
+import {Login} from "./Pages/Login/Login";
+import {Registration} from "./Pages/Login/Registration";
+import ConfirmEmail from "./Pages/Login/ConfirmEmail";
+import {AlertsProvider} from "./Providers/Theme/AlertsProvider";
+import {UsersProvider} from "./Providers/UsersProvider";
 
 
 export const store = createStore(reducer);
@@ -14,9 +20,9 @@ export const store = createStore(reducer);
 const CustomRoute = () => {
   return (
     <NavigationDrawer>
-      <div>
-        asdsadsa
-      </div>
+      <PublicRoute exact path="/login" component={Login}/>
+      <PublicRoute exact path="/registration" component={Registration}/>
+      <PublicRoute exact path="/confirm-email" component={ConfirmEmail}/>
     </NavigationDrawer>
   )
 }
@@ -27,7 +33,11 @@ root.render(
     <Provider store={store}>
       <ThemeWrapper>
         <CustomThemeProvider>
-          <CustomRoute/>
+          <AlertsProvider>
+            <UsersProvider>
+              <CustomRoute/>
+            </UsersProvider>
+          </AlertsProvider>
         </CustomThemeProvider>
       </ThemeWrapper>
     </Provider>
