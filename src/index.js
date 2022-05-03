@@ -6,6 +6,7 @@ import {createStore} from "redux";
 import reducer from './Redux/Reducers';
 import {Provider} from "react-redux";
 import {ThemeWrapper} from "./Providers/Theme/ThemeProvider";
+import {CustomThemeProvider} from "./Providers/Theme/CustomThemeProvider";
 
 
 export const store = createStore(reducer);
@@ -25,7 +26,9 @@ root.render(
   <React.StrictMode>
     <Provider store={store}>
       <ThemeWrapper>
-        <CustomRoute/>
+        <CustomThemeProvider>
+          <CustomRoute/>
+        </CustomThemeProvider>
       </ThemeWrapper>
     </Provider>
   </React.StrictMode>
