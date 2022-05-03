@@ -1,5 +1,5 @@
 import React from 'react'
-import {Redirect, Route} from 'react-router-dom'
+import {Navigate, Route} from 'react-router-dom'
 
 export const PrivateRoute = ({component: Component, ...rest}) => {
   const token = localStorage.getItem('token');
@@ -12,7 +12,7 @@ export const PrivateRoute = ({component: Component, ...rest}) => {
           token ? (
             <Component {...props} />
           ) : (
-            <Redirect to={{pathname: '/login', state: {from: props.location}}}/>
+            <Navigate to={{pathname: '/login', state: {from: props.location}}}/>
           )
         }
       />

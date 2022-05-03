@@ -2,7 +2,7 @@ import React, {useEffect, useRef, useState} from "react";
 import {Button, TextField, Typography} from "@mui/material";
 import {MailOutline, VpnKey} from "@mui/icons-material";
 import {post} from "../../Utils/Api/Fetch";
-import {useHistory} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 import {Trans, useTranslation} from "react-i18next";
 import {useUsers} from "../../Providers/UsersProvider";
 import {LoginLayout} from "../../Components/Layouts/LoginLayout";
@@ -14,7 +14,7 @@ const ConfirmEmail = () => {
   const {t} = useTranslation();
   const {login} = useUsers();
   const {setAlert} = useAlerts();
-  const history = useHistory();
+  const history = useNavigate();
   const interval = useRef(null);
   const [code, setCode] = useState('');
   const [email, setEmail] = useState('');

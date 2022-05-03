@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import {Box, Link} from "@mui/material";
 import {LoadingButton} from "@mui/lab";
-import {Link as RouterLink, useHistory} from 'react-router-dom';
+import {Link as RouterLink, useNavigate} from 'react-router-dom';
 import {PasswordTextField} from "../../Components/Common/Inputs/PasswordTextField";
 import {post} from "../../Utils/Api/Fetch";
 import {CustomInput} from "../../Components/Common/Inputs/CustomInput";
@@ -9,7 +9,7 @@ import {LoginLayout} from "../../Components/Layouts/LoginLayout";
 
 
 export const Registration = () => {
-  const history = useHistory();
+  const history = useNavigate();
   const [request, setRequest] = useState(false);
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');

@@ -2,7 +2,7 @@ import './Utils/Locales/i18n';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
-import {BrowserRouter as Router, Switch} from "react-router-dom";
+import {BrowserRouter as Router, Routes} from "react-router-dom";
 import {NavigationDrawer} from "./Components/Navigation/NavigationDrawer";
 import {createStore} from "redux";
 import reducer from './Redux/Reducers';
@@ -16,6 +16,7 @@ import ConfirmEmail from "./Pages/Login/ConfirmEmail";
 import {AlertsProvider} from "./Providers/Theme/AlertsProvider";
 import {UsersProvider} from "./Providers/UsersProvider";
 import SuspenseBackdrop from "./Components/Common/SuspenseBackdrop";
+import {PrivateRoute} from "./Components/Navigation/Routers/PrivateRoute";
 
 
 export const store = createStore(reducer);
@@ -25,11 +26,12 @@ const CustomRoute = () => {
     <React.Fragment>
       <SuspenseBackdrop/>
       <NavigationDrawer>
-        <Switch>
+        <Routes>
+          <PrivateRoute exact path="/home" component={Login}/>
           <PublicRoute exact path="/login" component={Login}/>
           <PublicRoute exact path="/registration" component={Registration}/>
           <PublicRoute exact path="/confirm-email" component={ConfirmEmail}/>
-        </Switch>
+        </Routes>
       </NavigationDrawer>
     </React.Fragment>
   )
