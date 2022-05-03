@@ -1,0 +1,365 @@
+{
+  "code": "en",
+  "characters": {
+    "shareCharacterModal": {
+      "roles": {
+        "viewer": "Viewer",
+        "editor": "Editor",
+        "owner": "Owner"
+      }
+    }
+  },
+  "viewCharacters": {
+    "classes": {
+      "title": "Class",
+      "any": "Any",
+      "warrior": "Warrior",
+      "crusader": "Crusader",
+      "dark_knight": "Dark knight",
+      "archer": "Archer",
+      "hunter": "Hunter",
+      "sniper": "Sniper",
+      "mage": "Mage",
+      "wizard": "Wizard",
+      "warlock": "Warlock",
+      "rogue": "Rogue",
+      "robber": "Robber",
+      "assassin": "Assassin"
+    },
+    "gender": {
+      "title": "Gender",
+      "male": "Male",
+      "female": "Female",
+      "any": "Any"
+    },
+    "level": "Level",
+    "stats": {
+      "parameters": {
+        "luck": "Luck",
+        "dexterity": "Dexterity",
+        "stamina": "Stamina",
+        "strength": "Strength",
+        "accuracy": "Accuracy",
+        "intelligence": "Intelligence",
+        "title": "Parameters",
+        "availableParameters": "Available parameters",
+        "drop": "Drop"
+      },
+      "health": {
+        "health": "Health",
+        "energy": "Energy",
+        "mana": "Мана"
+      },
+      "characteristics": {
+        "attack": "Attack",
+        "attack_speed": "Attack speed",
+        "health": "Health",
+        "crit_chance_rating": "Crit chance rating",
+        "defense": "Defense",
+        "dodge": "Dodge",
+        "hit": "Hit",
+        "dps": "Damage per second",
+        "ehp": "Character survivability",
+        "crit_power._hit": "Crit power hit",
+        "ehp_(pvp)": "Character survivability (PVP)",
+        "damage_resistance_(pvp)": "Damage resistance PVP",
+        "damage_(pvp)": "Damage PVP",
+        "fire_damage": "Fire element damage",
+        "water_damage": "Water element damage",
+        "earth_damage": "Earth element damage",
+        "air_damage": "Air element damage",
+        "chaos_damage": "Chaos element damage",
+        "poison_damage": "Poison element damage",
+        "fire_attack_resistance": "Fire element resistance",
+        "water_resistant": "Water element resistance",
+        "earth_resistant": "Earth element resistance",
+        "resist_air_attacks": "Air element resistance",
+        "resist_chaos_attacks": "Chaos element resistance",
+        "poison_attack_resistance": "Poison element resistance"
+      }
+    },
+    "progress": {
+      "strongman": "Strongman",
+      "accurate": "Accurate",
+      "wiseacre": "Wiseacre",
+      "dodger": "Dodger",
+      "lucky": "Lucky",
+      "sturdy": "Sturdy",
+      "strength": "Strength",
+      "accuracy": "Accuracy",
+      "intelligence": "Intelligence"
+    },
+    "items": {
+      "slots": {
+        "head": "Headdress",
+        "face": "Facial accessory",
+        "armor": "Armor",
+        "gloves": "Gloves",
+        "pants": "Pants",
+        "boots": "Boots",
+        "weapon": "Weapon (right hand)",
+        "shield": "Shield / Orb / Weapon (left hand)",
+        "artefact": "Artefact",
+        "totem": "Totem",
+        "ring": "Ring",
+        "amulet": "Amulet",
+        "decoration": "Decoration",
+        "costume": "Costume",
+        "beast": "Mount",
+        "spear": "Spear"
+      },
+      "stamps": {
+        "colors": {
+          "orange": "Оранжевый",
+          "violet": "Фиолетовый",
+          "blue": "Синий",
+          "green": "Зеленый"
+        }
+      }
+    }
+  },
+  "settings": {
+    "sidebar": {
+      "title": "User settings",
+      "monsters": "Monsters",
+      "sound": "Sound",
+      "comments": "Comments",
+      "theme": "Theme",
+      "integrations": "Integrations",
+      "templates": "Templates",
+      "formatters": "Formats"
+    },
+    "theme": {
+      "description can": "In this section you can change the theme settings",
+      "themeMode": "Theme mode",
+      "lightMode": "Standard theme",
+      "darkMode": "Dark theme",
+      "SnackbarSettings": "SnackbarSettings",
+      "maxStack": "Max Stack",
+      "Vertical": "vertical orientation",
+      "horizontal": "Horizontal orientation",
+      "top": "Top",
+      "Bottom": "Bottom",
+      "left": "Left",
+      "right": "Right",
+      "Center": "Center",
+      "transition": "Animation",
+      "demoAlert": "Demo alert"
+    }
+  },
+  "profile": {
+    "sidebar": {
+      "title": "User profile",
+      "changePassword": "Change password",
+      "vk": "VKontakte",
+      "myPremiums": "My premiums",
+      "premiumAccesses": "Premium access"
+    },
+    "userProfile": {
+      "deleteVkProfileModal": {
+        "title": "Deleting a Vkontakte profile",
+        "description": "You will no longer be able to receive notifications through Vkontakte"
+      },
+      "deleteTelegramProfileModal": {
+        "title": "Delete Telegram Profile",
+        "description": "You will no longer be able to receive notifications in Telegram"
+      },
+      "viewTelegramQRModal": {
+        "title": "Scan the QR code to go to the Telegram bot"
+      },
+      "viewVkQRModal": {
+        "title": "Scan the QR code to go to the dialogue with the VK group"
+      }
+    },
+    "changePassword": {
+      "currentPassword": "Current password",
+      "newPassword": "New password",
+      "confirmThePassword": "Confirm Password",
+      "changePasswordButton": "Change password"
+    }
+  },
+  "common": {
+    "cancel": "Cancel",
+    "create": "Create",
+    "change": "Change",
+    "delete": "Delete",
+    "history": "History",
+    "reset": "Reset",
+    "save": "Save",
+    "select": "Select",
+    "search": "Search",
+    "invite": "Invite"
+  },
+  "components": {
+    "drawer": {
+      "timers": "Timers",
+      "groups": "Groups",
+      "settings": "Settings",
+      "profile": "Profile",
+      "help": "Help",
+      "premiums": "Premiums",
+      "notifications": "Notifications",
+      "logout": "Logout"
+    },
+    "navbar": {
+      "accountMenu": {
+        "tooltip": "Account settings",
+        "welcome": "Welcome, {{username}}"
+      }
+    },
+    "breadcrumb": {
+      "user": "User",
+      "info": "Info"
+    },
+    "languageSelect": {
+      "label": "Language"
+    },
+    "emptyLists": {
+      "emptySearch": {
+        "text": "No results were found for your request",
+        "description": "Try searching for a different keyword."
+      },
+      "notifications": {
+        "text": "You have no notification",
+        "description": "Timer notifications appear here"
+      },
+      "groups": {
+        "text": "You have not entered any group yet",
+        "description": "Groups will appear here when you are added or you create a group",
+        "timers": {
+          "text": "There are no timers in this group yet",
+          "description": "Click on the plus sign to add a new timer"
+        },
+        "importTimers": {
+          "text": "You don't have personal timers yet",
+          "description": "When you add a personal timer, it will be available here"
+        },
+        "timerHistory": {
+          "text": "This timer has no change history yet",
+          "description": "History will appear when the timer is removed/changed"
+        },
+        "groupHistory": {
+          "text": "There is no history of changes in this group yet",
+          "description": "History will appear when one of the participants removes/changes the timer"
+        },
+        "members": {
+          "text": "This group has no members",
+          "description": "When you add members to the group, they will appear here."
+        },
+        "roles": {
+          "text": "There are no roles in this group",
+          "description": "When you add a role, it will appear here."
+        }
+      },
+      "settings": {
+        "monsters": {
+          "text": "You don't have a single monster",
+          "description": "To add a new monster, click on the plus sign"
+        },
+        "comments": {
+          "text": "You don't have any comments",
+          "description": "To add a new comment, click on the plus sign"
+        }
+      },
+      "timers": {
+        "text": "You don't have any timer",
+        "description": "Click on the plus sign to add a new timer"
+      }
+    },
+    "alerts": {
+      "error": "An error occurred while {{action}} {{instance}}",
+      "success": "{{instance}} successfully {{action}}",
+      "successActions": {
+        "restored_male": "restored",
+        "invited_male": "added",
+        "import": "imported",
+        "delete": "deleted",
+        "delete_male": "deleted",
+        "delete_female": "deleted",
+        "delete_it": "deleted",
+        "update": "updated",
+        "update_male": "updated",
+        "update_female": "updated",
+        "create": "created",
+        "create_male": "created",
+        "create_female": "created",
+        "disable_male": "disabled",
+        "enable_male": "enabled"
+      },
+      "errorActions": {
+        "delete": "delete",
+        "update": "update",
+        "create": "create"
+      },
+      "instances": {
+        "member": "Member",
+        "member_declination": "Member",
+        "user": "User",
+        "user_declination": "User",
+        "timer": "Timer",
+        "timers": "Timers",
+        "timer_declination": "Timer",
+        "settings": "Settings",
+        "monster": "Monster",
+        "monsters": "Monsters",
+        "notification": "Notification",
+        "notifications": "Notifications",
+        "premium": "Premium",
+        "group": "Group",
+        "role": "Role",
+        "groupSettings": "Group settings"
+      },
+      "custom": {
+        "unknownError": "An unknown error has occurred"
+      }
+    }
+  },
+  "login": {
+    "email": "Email",
+    "password": "Password",
+    "signIn": "Login",
+    "registration": "Registration",
+    "forgotPassword": "Forgot your password?",
+    "orContinueWith": "Or continue with",
+    "authError": {
+      "message": "Username or password is incorrect",
+      "level": "error"
+    },
+    "authErrorGoogle": {
+      "message": "An error occurred while trying to authorize",
+      "level": "error"
+    }
+  },
+  "registration": {
+    "username": "Username",
+    "signUp": "Sign up",
+    "authorization": "Authorization"
+  },
+  "confirmEmail": {
+    "title": "Activate your account",
+    "block_1": "An email was sent to your email address <0>{{email}}</0> with a code to activate your account.",
+    "block_2": "If you have not received the letter, then try to send it again",
+    "sendEmail": "Send email",
+    "sendEmailIn_one": "Send email in {{count}} second",
+    "sendEmailIn_other": "Send email in {{count}} seconds",
+    "codeInputLabel": "Code from the letter",
+    "codeInputPlaceholder": "Enter the code sent in the letter",
+    "sendCode": "Send Code",
+    "activationErrorAlert": {
+      "message": "Activation failed. Please check if the code is correct",
+      "level": "error"
+    },
+    "activationSuccessAlert": {
+      "message": "Account activated successfully",
+      "level": "success"
+    },
+    "errorSendingEmail": {
+      "message": "An error occurred while sending the email",
+      "level": "error"
+    },
+    "successSendingEmail": {
+      "message": "Code was sent to {{email}}",
+      "level": "success"
+    }
+  }
+}

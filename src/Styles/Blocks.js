@@ -68,3 +68,31 @@ export const CustomDrawerHeader = styled('div')(({theme}) => ({
   // necessary for content to be below app bar
   ...theme.mixins.toolbar,
 }));
+
+export const GoogleAuthStyles = {
+  text: {
+    textAlign: 'center',
+    marginTop: 3
+  },
+  buttonContainer: {
+    display: 'flex',
+    marginTop: 1,
+    justifyContent: 'center'
+  },
+  image: {
+    width: 30,
+    height: 30
+  },
+  buttonProgress: {
+    color: 'white',
+    //position: 'absolute',
+    //top: '50%',
+    //left: '50%',
+    marginTop: -12,
+    marginLeft: -12,
+  },
+  buttonWrapper: {
+    margin: 1,
+    position: 'relative',
+  }
+};

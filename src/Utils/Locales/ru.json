@@ -1,0 +1,369 @@
+{
+  "code": "ru",
+  "characters": {
+    "shareCharacterModal": {
+      "roles": {
+        "viewer": "Наблюдатель",
+        "editor": "Редактор",
+        "owner": "Владелец"
+      }
+    }
+  },
+  "viewCharacters": {
+    "classes": {
+      "title": "Класс",
+      "any": "Любой",
+      "warrior": "Мечник",
+      "crusader": "Крестоносец",
+      "dark_knight": "Темный рыцарь",
+      "archer": "Лучник",
+      "hunter": "Охотник",
+      "sniper": "Снайпер",
+      "mage": "Маг",
+      "wizard": "Волшебник",
+      "warlock": "Чернокнижник",
+      "rogue": "Вор",
+      "robber": "Разбойник",
+      "assassin": "Ассассин"
+    },
+    "gender": {
+      "title": "Пол",
+      "male": "Мужской",
+      "female": "Женский",
+      "any": "Любой"
+    },
+    "level": "Уровень",
+    "stats": {
+      "parameters": {
+        "luck": "Удача",
+        "dexterity": "Ловкость",
+        "stamina": "Выносливость",
+        "strength": "Сила",
+        "accuracy": "Точность",
+        "intelligence": "Интеллект",
+        "title": "Параметры",
+        "availableParameters": "Доступно параметров",
+        "drop": "Сброс"
+      },
+      "health": {
+        "health": "Здоровье",
+        "energy": "Энергия",
+        "mana": "Мана"
+      },
+      "characteristics": {
+        "attack": "Атака",
+        "attack_speed": "Скорость атаки",
+        "health": "Здоровье",
+        "crit_chance_rating": "Рейтинг шанса крита",
+        "defense": "Защита",
+        "dodge": "Уворот",
+        "hit": "Попадание",
+        "dps": "Урон в секунду",
+        "ehp": "Выживаемость персонажа",
+        "crit_power._hit": "Сила крит. удара",
+        "ehp_(pvp)": "Выживаемость персонажа (PVP)",
+        "damage_resistance_(pvp)": "Устойчивость к PVP урону",
+        "damage_(pvp)": "Урон PVP",
+        "fire_damage": "Урон элементом Огня",
+        "water_damage": "Урон элементом Воды",
+        "earth_damage": "Урон элементом Земли",
+        "air_damage": "Урон элементом Воздуха",
+        "chaos_damage": "Урон элементом Хаоса",
+        "poison_damage": "Урон элементом Яда",
+        "fire_attack_resistance": "Устойчивость к элементу Огня",
+        "water_resistant": "Устойчивость к элементу Воды",
+        "earth_resistant": "Устойчивость к элементу Земли",
+        "resist_air_attacks": "Устойчивость к элементу Воздуха",
+        "resist_chaos_attacks": "Устойчивость к элементу Хаоса",
+        "poison_attack_resistance": "Устойчивость к элементу Яда"
+      }
+    },
+    "progress": {
+      "strongman": "Силач",
+      "accurate": "Меткий",
+      "wiseacre": "Умник",
+      "dodger": "Ловкач",
+      "lucky": "Везунчик",
+      "sturdy": "Здоровяк",
+      "strength": "Силы",
+      "accuracy": "Точности",
+      "intelligence": "Интеллекта"
+    },
+    "items": {
+      "slots": {
+        "head": "Головной убор",
+        "face": "Аксессуар для лица",
+        "armor": "Доспех",
+        "gloves": "Перчатки",
+        "pants": "Поножи",
+        "boots": "Сапоги",
+        "weapon": "Оружие",
+        "shield": "Щит / Орб / Оружие",
+        "artefact": "Артефакт",
+        "totem": "Тотем",
+        "ring": "Кольцо",
+        "amulet": "Амулет",
+        "decoration": "Украшение",
+        "costume": "Костюм",
+        "beast": "Верховой зверь",
+        "spear": "Копье"
+      },
+      "stamps": {
+        "colors": {
+          "orange": "Оранжевый",
+          "violet": "Фиолетовый",
+          "blue": "Синий",
+          "green": "Зеленый"
+        }
+      }
+    }
+  },
+  "settings": {
+    "sidebar": {
+      "title": "Пользовательские настройки",
+      "monsters": "Монстры",
+      "sound": "Звук",
+      "comments": "Комментарии",
+      "theme": "Тема",
+      "integrations": "Интеграции",
+      "templates": "Шаблоны",
+      "formatters": "Форматы"
+    },
+    "theme": {
+      "description": "В этом разделе вы можете изменить настройки темы",
+      "themeMode": "Режим",
+      "lightMode": "Стандартная тема",
+      "darkMode": "Темная тема",
+      "snackbarSettings": "Настройки всплывающих уведомлений",
+      "maxStack": "Максимальный стек",
+      "vertical": "Вертикальная ориентация",
+      "horizontal": "Горизонтальная ориентация",
+      "top": "Сверху",
+      "bottom": "Снизу",
+      "left": "Слева",
+      "right": "Справа",
+      "center": "По центру",
+      "transition": "Анимация",
+      "demoAlert": "Демо уведомление"
+    }
+  },
+  "profile": {
+    "sidebar": {
+      "title": "Профиль пользователя",
+      "changePassword": "Сменить пароль",
+      "vk": "ВКонтакте",
+      "myPremiums": "Мои премиумы",
+      "premiumAccesses": "Премиум доступы"
+    },
+    "userProfile": {
+      "deleteVkProfileModal": {
+        "title": "Удаление профиля Вконтакте",
+        "description": "Вы больше не сможете получать уведомления через Вконтакте"
+      },
+      "deleteTelegramProfileModal": {
+        "title": "Удаление профиля Telegram",
+        "description": "Вы больше не сможете получать уведомления в Telegram"
+      },
+      "viewTelegramQRModal": {
+        "title": "Отсканируйте QR код для перехода к Telegram боту"
+      },
+      "viewVkQRModal": {
+        "title": "Отсканируйте QR код для перехода к диалогу с гуппой ВКонтакте"
+      }
+    },
+    "changePassword": {
+      "currentPassword": "Текущий пароль",
+      "newPassword": "Новый пароль",
+      "confirmThePassword": "Подтвердите пароль",
+      "changePasswordButton": "Сменить пароль"
+    }
+  },
+  "common": {
+    "cancel": "Отмена",
+    "create": "Создать",
+    "change": "Изменить",
+    "delete": "Удалить",
+    "history": "История",
+    "reset": "Сбросить",
+    "save": "Сохранить",
+    "select": "Выбрать",
+    "search": "Поиск",
+    "invite": "Пригласить"
+  },
+  "components": {
+    "drawer": {
+      "timers": "Таймеры",
+      "groups": "Группы",
+      "settings": "Настройки",
+      "profile": "Профиль",
+      "help": "Помощь",
+      "premiums": "Премиумы",
+      "notifications": "Уведомления",
+      "logout": "Выход"
+    },
+    "navbar": {
+      "accountMenu": {
+        "tooltip": "Настройки аккаунта",
+        "welcome": "Добро пожаловать, {{username}}"
+      }
+    },
+    "breadcrumb": {
+      "user": "Пользователь",
+      "info": "Информация"
+    },
+    "languageSelect": {
+      "label": "Язык"
+    },
+    "emptyLists": {
+      "emptySearch": {
+        "text": "По вашему запросу ничего не найдено",
+        "description": "Попробуйте выполнить поиск по другому ключевому слову"
+      },
+      "notifications": {
+        "text": "У вас нет ни одного уведомления",
+        "description": "Уведомления от таймеров будут появляться тут"
+      },
+      "groups": {
+        "text": "Вы еще не состоите ни в одной группе",
+        "description": "Группы появятся тут, когда вас добавят или вы создадите группу",
+        "timers": {
+          "text": "В этой группе еще нет таймеров",
+          "description": "Нажмите на плюсик, чтобы добавить новый таймер"
+        },
+        "importTimers": {
+          "text": "У вас еще нет личных таймеров",
+          "description": "Когда вы добавите личный таймер, то он будет доступен тут"
+        },
+        "timerHistory": {
+          "text": "У этого таймера еще нет истории изменений",
+          "description": "История появится, когда таймер будет удален/изменен"
+        },
+        "groupHistory": {
+          "text": "История изменений в этой группе пока отсутствует",
+          "description": "История появится, когда кто-то из участников удалит/изменит таймер"
+        },
+        "members": {
+          "text": "В этой группе нет участников",
+          "description": "Когда вы добавите участников в группу, они появятся тут"
+        },
+        "roles": {
+          "text": "В данной групе нет ролей",
+          "description": "Когда вы добавите роль, она появятся тут"
+        }
+      },
+      "settings": {
+        "monsters": {
+          "text": "У вас нет ни одного монстра",
+          "description": "Чтобы добавить нового монстра нажмите на плюсик"
+        },
+        "comments": {
+          "text": "У вас нет ни одного комментария",
+          "description": "Чтобы добавить новый комментарий нажмите на плюсик"
+        }
+      },
+      "timers": {
+        "text": "У вас нет ни одного таймера",
+        "description": "Нажмите на плюсик, чтобы добавить новый таймер"
+      }
+    },
+    "alerts": {
+      "error": "Произошла ошибка при {{action}} {{instance}}",
+      "success": "{{instance}} успешно {{action}}",
+      "successActions": {
+        "restored_male": "восстановлен",
+        "invited_male": "добавлен",
+        "import": "импортированы",
+        "delete": "удалены",
+        "delete_male": "удален",
+        "delete_female": "удалена",
+        "delete_it": "удалено",
+        "update": "обновлены",
+        "update_male": "обновлен",
+        "update_female": "обновлена",
+        "create": "созданы",
+        "create_male": "создан",
+        "create_female": "создана",
+        "disable_male": "отключен",
+        "enable_male": "включен"
+      },
+      "errorActions": {
+        "delete": "удалении",
+        "update": "обновлении",
+        "create": "создании"
+      },
+      "instances": {
+        "member": "Участник",
+        "member_declination": "Участника",
+        "user": "Пользователь",
+        "user_declination": "Пользователя",
+        "timer": "Таймер",
+        "timers": "Таймеры",
+        "timer_declination": "Таймера",
+        "settings": "Настройки",
+        "monster": "Монстер",
+        "monsters": "Монстры",
+        "notification": "Уведомление",
+        "notifications": "Уведомления",
+        "premium": "Премиум",
+        "group": "Группа",
+        "role": "Роль",
+        "groupSettings": "Настройки группы"
+      },
+      "custom": {
+        "unknownError": "Произошла неизвестная ошибка"
+      }
+    }
+  },
+  "login": {
+    "email": "Электронная почта",
+    "password": "Пароль",
+    "signIn": "Войти",
+    "registration": "Регистрация",
+    "forgotPassword": "Забыли пароль?",
+    "orContinueWith": "Или воспользуйтесь",
+    "authError": {
+      "message": "Имя пользователь или пароль не верные",
+      "level": "error"
+    },
+    "authErrorGoogle": {
+      "message": "Произошла ошмбка при попытке авторизации",
+      "level": "error"
+    }
+  },
+  "registration": {
+    "username": "Имя пользователя",
+    "signUp": "Зарегистрироваться",
+    "authorization": "Авторизация"
+  },
+  "confirmEmail": {
+    "title": "Активируйте учетную запись",
+    "block_1": "На ваш электронный адрес <0>{{email}}</0> было отправлено письмо с кодом для активации аккаунта.",
+    "block_2": "Если вы не получили письмо, то попробуйте отпрввить его повторно",
+    "sendEmail": "Отправить письмо",
+    "sendEmailIn_zero": "Отправить письмо через {{count}} секунд",
+    "sendEmailIn_one": "Отправить письмо через {{count}} секунду",
+    "sendEmailIn_two": "Отправить письмо через {{count}} секунды",
+    "sendEmailIn_few": "Отправить письмо через {{count}} секунды",
+    "sendEmailIn_many": "Отправить письмо через {{count}} секунд",
+    "sendEmailIn_other": "Отправить письмо через {{count}} секунд",
+    "codeInputLabel": "Код из письма",
+    "codeInputPlaceholder": "Введите код отправленный в письме",
+    "sendCode": "Отправить код",
+    "activationErrorAlert": {
+      "message": "Ошибка активации. Проверьте правильность кода",
+      "level": "error"
+    },
+    "activationSuccessAlert": {
+      "message": "Учетная запись успешно активирована",
+      "level": "success"
+    },
+    "errorSendingEmail": {
+      "message": "Произошла ошибка при отправке письма",
+      "level": "error"
+    },
+    "successSendingEmail": {
+      "message": "Код был был отправлен на {{email}}",
+      "level": "success"
+    }
+  }
+}

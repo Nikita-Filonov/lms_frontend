@@ -13,17 +13,21 @@ import {Registration} from "./Pages/Login/Registration";
 import ConfirmEmail from "./Pages/Login/ConfirmEmail";
 import {AlertsProvider} from "./Providers/Theme/AlertsProvider";
 import {UsersProvider} from "./Providers/UsersProvider";
+import SuspenseBackdrop from "./Components/Common/SuspenseBackdrop";
 
 
 export const store = createStore(reducer);
 
 const CustomRoute = () => {
   return (
-    <NavigationDrawer>
-      <PublicRoute exact path="/login" component={Login}/>
-      <PublicRoute exact path="/registration" component={Registration}/>
-      <PublicRoute exact path="/confirm-email" component={ConfirmEmail}/>
-    </NavigationDrawer>
+    <React.Fragment>
+      <SuspenseBackdrop/>
+      <NavigationDrawer>
+        <PublicRoute exact path="/login" component={Login}/>
+        <PublicRoute exact path="/registration" component={Registration}/>
+        <PublicRoute exact path="/confirm-email" component={ConfirmEmail}/>
+      </NavigationDrawer>
+    </React.Fragment>
   )
 }
 
