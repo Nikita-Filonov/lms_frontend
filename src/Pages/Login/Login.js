@@ -1,6 +1,6 @@
 import React, {useState} from "react";
-import {Box, Link} from "@mui/material";
-import {Alert, LoadingButton} from "@mui/lab";
+import {Alert, Box, Link} from "@mui/material";
+import {LoadingButton} from "@mui/lab";
 import {Link as RouterLink} from 'react-router-dom';
 import {post} from "../../Utils/Api/Fetch";
 import {useUsers} from "../../Providers/UsersProvider";
@@ -18,7 +18,7 @@ export const Login = () => {
   const [alert, setAlert] = useState({});
 
   const onLogin = async () => {
-    const {json, code} = await post('/login/', {email, password}, false);
+    const {json, code} = await post('/token/', {email, password}, false);
     if (code === 401) {
       setAlert(t('login.authError'));
       return;
