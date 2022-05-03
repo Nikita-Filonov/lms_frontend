@@ -1,19 +1,8 @@
 import React from 'react'
-import {Navigate, Route} from 'react-router-dom'
+import {Navigate, Outlet} from 'react-router-dom'
 
-export const PublicRoute = ({component: Component, ...rest}) => {
+export const PublicRoute = (props) => {
   const token = localStorage.getItem('token');
 
-  return (
-    <Route
-      {...rest}
-      render={props =>
-        token ? (
-          <Navigate to={{pathname: '/home', state: {from: props.location}}}/>
-        ) : (
-          <Component {...props} />
-        )
-      }
-    />
-  )
+  return token ? <Navigate to={{pathname: '/home', state: {from: props.location}}}/> : <Outlet/>;
 };

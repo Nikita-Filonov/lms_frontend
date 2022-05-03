@@ -9,7 +9,7 @@ import {LoginLayout} from "../../Components/Layouts/LoginLayout";
 
 
 export const Registration = () => {
-  const history = useNavigate();
+  const navigate = useNavigate();
   const [request, setRequest] = useState(false);
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
@@ -20,8 +20,8 @@ export const Registration = () => {
   const onRegistration = async () => {
     setRequest(true);
     const payload = {username, email, password2, password: password1};
-    const {error, json} = await post('/api/v1/registration/', payload, false);
-    error ? setAlert(json) : history.push(`/confirm-email?email=${json?.email}`);
+    const {error, json} = await post('/user/', payload, false);
+    error ? setAlert(json) : navigate(`/confirm-email?email=${json?.email}`);
     setRequest(false);
   }
 

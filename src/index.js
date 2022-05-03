@@ -2,7 +2,7 @@ import './Utils/Locales/i18n';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
-import {BrowserRouter as Router, Routes} from "react-router-dom";
+import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import {NavigationDrawer} from "./Components/Navigation/NavigationDrawer";
 import {createStore} from "redux";
 import reducer from './Redux/Reducers';
@@ -27,10 +27,18 @@ const CustomRoute = () => {
       <SuspenseBackdrop/>
       <NavigationDrawer>
         <Routes>
-          <PrivateRoute exact path="/home" component={Login}/>
-          <PublicRoute exact path="/login" component={Login}/>
-          <PublicRoute exact path="/registration" component={Registration}/>
-          <PublicRoute exact path="/confirm-email" component={ConfirmEmail}/>
+          <Route exact path='/home' element={<PrivateRoute/>}>
+            <Route exact path='/home' element={<Login/>}/>
+          </Route>
+          <Route exact path='/login' element={<PublicRoute/>}>
+            <Route exact path='/login' element={<Login/>}/>
+          </Route>
+          <Route exact path='/registration' element={<PublicRoute/>}>
+            <Route exact path='/registration' element={<Registration/>}/>
+          </Route>
+          <Route exact path='/confirm-email' element={<PublicRoute/>}>
+            <Route exact path='/confirm-email' element={<ConfirmEmail/>}/>
+          </Route>
         </Routes>
       </NavigationDrawer>
     </React.Fragment>
