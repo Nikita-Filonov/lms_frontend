@@ -17,8 +17,7 @@ import {AlertsProvider} from "./Providers/Theme/AlertsProvider";
 import {UsersProvider} from "./Providers/UsersProvider";
 import SuspenseBackdrop from "./Components/Common/SuspenseBackdrop";
 import {PrivateRoute} from "./Components/Navigation/Routers/PrivateRoute";
-import CoursesList from "./Pages/Courses/CoursesList";
-import {CoursesProvider} from "./Providers/CoursesProvider";
+import {CoursesRoutes} from "./Components/Navigation/Routers/Courses/CoursesRoutes";
 
 
 export const store = createStore(reducer);
@@ -30,11 +29,7 @@ const CustomRoute = () => {
       <NavigationDrawer>
         <Switch>
           <PrivateRoute exact path="/home" component={Login}/>
-          <PrivateRoute exact path="/courses" component={props =>
-            <CoursesProvider>
-              <CoursesList {...props}/>
-            </CoursesProvider>
-          }/>
+          <CoursesRoutes/>
           <PublicRoute exact path="/login" component={Login}/>
           <PublicRoute exact path="/registration" component={Registration}/>
           <PublicRoute exact path="/confirm-email" component={ConfirmEmail}/>

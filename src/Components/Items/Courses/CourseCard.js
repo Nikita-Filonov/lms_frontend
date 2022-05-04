@@ -1,8 +1,13 @@
 import React from "react";
 import {Box, Button, Card, CardActions, CardContent, CardMedia, Grid} from "@mui/material";
 import Typography from "@mui/material/Typography";
+import {useHistory} from "react-router-dom";
 
 export const CourseCard = ({course}) => {
+  const history = useHistory();
+
+  const onEdit = () => history.push(`/courses/edit/${course.id}`);
+
   return (
     <Grid item xs={12} md={4}>
       <Card sx={{maxWidth: 345}}>
@@ -22,7 +27,7 @@ export const CourseCard = ({course}) => {
         </CardContent>
         <CardActions>
           <Button size="small">Просмотр</Button>
-          <Button size="small">Редактировать</Button>
+          <Button size="small" onClick={onEdit}>Редактировать</Button>
           <Box sx={{flexGrow: 1}}/>
           <Button size="small" color={'error'}>Удалить</Button>
         </CardActions>
