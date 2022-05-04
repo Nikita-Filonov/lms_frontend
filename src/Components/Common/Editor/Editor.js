@@ -20,12 +20,14 @@ export const Editor = ({autoFocus, onChange, editorData}) => {
     onChange(savedData);
   }, [onChange]);
 
-  return <ReactEditorJS
-    holder={'editorHolder'}
-    tools={EDITOR_JS_TOOLS}
-    autoFocus={autoFocus}
-    onInitialize={handleInitialize}
-    onChange={handleSave}
-    defaultValue={editorData}
-  />
+  return (
+    <ReactEditorJS
+      holder={'editorHolder'}
+      tools={EDITOR_JS_TOOLS}
+      autoFocus={autoFocus}
+      onInitialize={handleInitialize}
+      onChange={handleSave}
+      defaultValue={editorData}
+    />
+  )
 };

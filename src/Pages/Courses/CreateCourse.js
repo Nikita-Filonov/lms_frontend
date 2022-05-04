@@ -4,6 +4,7 @@ import {connect} from 'react-redux';
 import {CourseEditor} from "../../Components/Common/Editor/CourseEditor";
 import {useParams} from 'react-router-dom';
 import {useCourses} from "../../Providers/CoursesProvider";
+import {EditorRenderer} from "../../Components/Common/Editor/EdtitorRenderer/EdtitorRenderer";
 
 const CreateCourse = ({course}) => {
   const {courseId} = useParams();
@@ -16,6 +17,7 @@ const CreateCourse = ({course}) => {
   return (
     <MainLayout>
       {course?.id && <CourseEditor course={course}/>}
+      {/*{course?.id && <EditorRenderer data={JSON.parse(course.editorContent)}/>}*/}
     </MainLayout>
   )
 };
