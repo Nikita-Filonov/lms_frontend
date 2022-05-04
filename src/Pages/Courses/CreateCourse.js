@@ -15,7 +15,7 @@ const CreateCourse = ({course}) => {
 
   return (
     <MainLayout>
-      <CourseEditor course={course}/>
+      {course?.id && <CourseEditor course={course}/>}
     </MainLayout>
   )
 };

@@ -1,36 +1,35 @@
-import React, {useCallback, useMemo, useState} from "react";
+import React, {useMemo, useState} from "react";
 import {Editor} from "./Editor";
 import debounce from 'lodash/debounce';
 import {OutputData} from "@editorjs/editorjs";
-import {saveHtmlEditorContent} from "../../../Utils/Helpers/Editor";
+import {emptyEditor, saveHtmlEditorContent} from "../../../Utils/Helpers/Editor";
 import {useCourses} from "../../../Providers/CoursesProvider";
 
 
 export const CourseEditor = ({course}) => {
   const {updateCourse} = useCourses();
   const [loading, setLoading] = useState(false);
-  const [editorContent, setEditorContent] = useState(course.editorContent);
 
-  const saveProperties = useCallback(async (editorData) => {
+  const editorContent = useMemo(
+    () => course?.editorContent ? JSON.parse(course?.editorContent) : emptyEditor(),
+    [course?.editorContent]
+  );
+
+  const saveContent = async (editorData: OutputData) => {
     setLoading(true);
 
     if (!course?.id) {
       return;
     }
 
+    const content = JSON.stringify(editorData);
     setTimeout(async () => {
       const htmlContent = saveHtmlEditorContent();
-      await updateCourse({content: htmlContent, editorContent: editorData});
+      await updateCourse(course.id, {content: htmlContent, editorContent: content});
     }, 100);
-  }, [editorContent]);
-
-  const saveContent = useCallback(async (editorData: OutputData) => {
-    const content = JSON.stringify(editorData);
-    setEditorContent(content);
-    await saveProperties(content);
-  }, []);
+  };
 
   const saveContentDebounced = useMemo(() => debounce(saveContent, 3000), [saveContent]);
 
-  return <Editor autoFocus={true} onChange={saveContentDebounced}/>;
+  return <Editor autoFocus={true} onChange={saveContentDebounced} editorData={editorContent}/>;
 };

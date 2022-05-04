@@ -4,7 +4,7 @@ import {EDITOR_JS_TOOLS} from "../../../Utils/Constants/Editor";
 
 const ReactEditorJS = createReactEditorJS();
 
-export const Editor = ({autoFocus, onChange}) => {
+export const Editor = ({autoFocus, onChange, editorData}) => {
   const editorCore = useRef(null);
 
   const handleInitialize = useCallback((instance) => {
@@ -21,9 +21,11 @@ export const Editor = ({autoFocus, onChange}) => {
   }, [onChange]);
 
   return <ReactEditorJS
+    holder={'editorHolder'}
     tools={EDITOR_JS_TOOLS}
     autoFocus={autoFocus}
     onInitialize={handleInitialize}
     onChange={handleSave}
-  />;
+    defaultValue={editorData}
+  />
 };
