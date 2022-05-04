@@ -18,7 +18,7 @@ export const Editor = ({autoFocus, onChange}) => {
 
     const savedData = await editorCore.current.save();
     onChange(savedData);
-  }, []);
+  }, [onChange]);
 
   return <ReactEditorJS
     tools={EDITOR_JS_TOOLS}
