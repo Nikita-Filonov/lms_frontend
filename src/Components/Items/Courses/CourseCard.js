@@ -2,11 +2,16 @@ import React from "react";
 import {Box, Button, Card, CardActions, CardContent, CardMedia, Grid} from "@mui/material";
 import Typography from "@mui/material/Typography";
 import {useHistory} from "react-router-dom";
+import {connect} from 'react-redux';
+import {setCourse} from "../../../Redux/Courses/coursesActions";
 
-export const CourseCard = ({course}) => {
+const CourseCard = ({course, setCourse}) => {
   const history = useHistory();
 
-  const onEdit = () => history.push(`/courses/edit/${course.id}`);
+  const onEdit = () => {
+    setCourse(course);
+    history.push(`/courses/edit/${course.id}`);
+  }
 
   return (
     <Grid item xs={12} md={4}>
@@ -34,4 +39,6 @@ export const CourseCard = ({course}) => {
       </Card>
     </Grid>
   )
-}
+};
+
+export default connect(null, {setCourse})(CourseCard);

@@ -2,7 +2,7 @@ import React from "react";
 import {CoursesProvider} from "../../../../Providers/CoursesProvider";
 import CoursesList from "../../../../Pages/Courses/CoursesList";
 import {PrivateRoute} from "../PrivateRoute";
-import {CreateCourse} from "../../../../Pages/Courses/CreateCourse";
+import CreateCourse from "../../../../Pages/Courses/CreateCourse";
 
 export const CoursesRoutes = () =>
   <CoursesProvider>

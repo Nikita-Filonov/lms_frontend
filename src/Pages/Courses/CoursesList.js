@@ -1,7 +1,7 @@
 import React, {useEffect} from "react";
 import {MainLayout} from "../../Components/Layouts/MainLayout";
 import {useCourses} from "../../Providers/CoursesProvider";
-import {CourseCard} from "../../Components/Items/Courses/CourseCard";
+import CourseCard from "../../Components/Items/Courses/CourseCard";
 import {Grid} from "@mui/material";
 import {CustomFab} from "../../Components/Common/Buttons/CustomFab";
 import {Add} from "@mui/icons-material";
