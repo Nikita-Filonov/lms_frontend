@@ -14,7 +14,7 @@ const CoursesList = ({setCreateCourseModal}) => {
 
   useEffect(() => {
     (async () => await getCourses())()
-  }, [getCourses]);
+  }, []);
 
   const onCreateCourse = () => setCreateCourseModal(true);
 

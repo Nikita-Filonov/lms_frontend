@@ -1,5 +1,5 @@
 import React, {useContext, useState} from 'react';
-import {get} from "../Utils/Api/Fetch";
+import {get, post} from "../Utils/Api/Fetch";
 
 const CoursesContext = React.createContext(null);
 
@@ -9,10 +9,15 @@ const CoursesProvider = ({children}) => {
   const getCourses = async () => {
     const {json, error} = await get('/courses/', true);
     !error && setCourses(json);
+  };
+
+  const createCourse = async (payload) => {
+    const {json, error} = await post('/courses/', payload, true);
+    !error && setCourses([...courses, json]);
   }
 
   return (
-    <CoursesContext.Provider value={{courses, getCourses}}>
+    <CoursesContext.Provider value={{courses, getCourses, createCourse}}>
       {children}
     </CoursesContext.Provider>
   );
