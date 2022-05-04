@@ -26,4 +26,4 @@ export const Editor = ({autoFocus, onChange}) => {
     onInitialize={handleInitialize}
     onChange={handleSave}
   />;
-}
+};

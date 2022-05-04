@@ -4,7 +4,8 @@ export const INITIAL_COURSES = {
     description: '',
     image: '',
     content: '',
-    editMode: false
+    editorContent: '',
+    editMode: false,
   },
   createCourseModal: false
 };
