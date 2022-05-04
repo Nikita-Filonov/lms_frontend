@@ -1,21 +1,20 @@
 import React, {useEffect} from "react";
 import {MainLayout} from "../../Components/Layouts/MainLayout";
 import {connect} from 'react-redux';
-import {Button} from "@mui/material";
 import {CourseEditor} from "../../Components/Common/Editor/CourseEditor";
 import {useParams} from 'react-router-dom';
-
+import {useCourses} from "../../Providers/CoursesProvider";
 
 const CreateCourse = ({course}) => {
   const {courseId} = useParams();
+  const {getCourse} = useCourses();
 
   useEffect(() => {
-    console.log(courseId)
-  }, [courseId]);
+    (async () => (courseId && !course?.id) && await getCourse(courseId))()
+  }, [courseId, course?.id, getCourse]);
 
   return (
     <MainLayout>
-      <Button>asdsad</Button>
       <CourseEditor course={course}/>
     </MainLayout>
   )
