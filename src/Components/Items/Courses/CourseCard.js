@@ -1,5 +1,5 @@
 import React from "react";
-import {Button, Card, CardActions, CardContent, CardMedia, Grid} from "@mui/material";
+import {Box, Button, Card, CardActions, CardContent, CardMedia, Grid} from "@mui/material";
 import Typography from "@mui/material/Typography";
 
 export const CourseCard = ({course}) => {
@@ -17,13 +17,14 @@ export const CourseCard = ({course}) => {
             {course.title}
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            Lizards are a widespread group of squamate reptiles, with over 6,000
-            species, ranging across all continents except Antarctica
+            {course.description}
           </Typography>
         </CardContent>
         <CardActions>
-          <Button size="small">Preview</Button>
-          <Button size="small">Edit</Button>
+          <Button size="small">Просмотр</Button>
+          <Button size="small">Редактировать</Button>
+          <Box sx={{flexGrow: 1}}/>
+          <Button size="small" color={'error'}>Удалить</Button>
         </CardActions>
       </Card>
     </Grid>
